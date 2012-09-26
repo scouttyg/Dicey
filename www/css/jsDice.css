@@ -1,0 +1,56 @@
+@import url('http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold|Droid+Sans+Mono|Droid+Serif:regular,italic,bold,bolditalic|Ubuntu:light,lightitalic,regular,italic,500,500italic,bold,bolditalic');
+@import url('http://taylorcopeland.com/droidSans_droidSansMono_droidSerif_ubuntu.css')'
+
+body
+{
+	font-family: 'Droid Sans', arial, serif;
+}
+
+h1
+{
+	font-family: 'Droid Serif', arial, serif;
+}
+
+button
+{
+	font-family: 'Ubuntu', arial, serif;
+}
+
+#license
+{
+	font-family: 'Ubuntu', arial, serif;
+	font-style: italic;
+}
+
+ul
+{
+	font-family: 'Droid Sans Mono', arial, serif;
+}
+#diceImages
+{
+	height: 130px;
+	width: 260px;
+	margin-top: 86px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+
+.die
+{
+	float: right;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+#roll
+{
+	height: 32px;
+	width: 32px;
+	overflow: hidden;
+}

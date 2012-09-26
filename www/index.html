@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<!--
+#
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+# 
+# http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#  KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+#
+-->
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name = "format-detection" content = "telephone=no"/>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width;" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/jsDice.css" />
+        <title>Dice iPhone App</title>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.5.min.js"></script>
+        <script type="text/javascript" src="js/jsDice.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(".die").hide();
+                $(".die").delay(1000);
+                $(".die").fadeIn(2250);
+            });
+            $("#rollButton").onclick(function(){
+                $("#diceImages").delay(3000);
+            });
+        </script>
+
+        <script>
+            function addDie() {
+                var count = $('.die').length + 1;
+                $('#diceImages').append('<img style="height:100px;width:100px;" id="die'+count+'" class="die" src="img/raster/200px/200px-Dice-1.png" alt="Die Image 1" />');
+            }
+
+            function subtractDie() {
+                var count = $('.die').length;
+                var remove_die = "#die"+count.toString()
+                $(remove_die).remove();
+            }
+
+        </script>
+    </head>
+    <body>
+        <h1>Dice Roll</h1>
+        <a href="javascript:void(0);" onclick="addDie()">[ + ]</a>
+        <a href="javascript:void(0);" onclick="subtractDie()">[ - ]</a>
+        <form action="#">
+            <p><input type="button" onclick="diced()" value="Roll" id="rollButton" /></p>
+        </form>
+        <div id="diceImages">
+            <img style="height:100px;width:100px;" id="die1" class="die" src="img/raster/200px/200px-Dice-1.png" alt="Die Image 1" />
+            <img style="height:100px;width:100px;" id="die2" class="die" src="img/raster/200px/200px-Dice-1.png" alt="Die Image 1" />
+        </div>
+
+
+
+
+        <script type="text/javascript" src="cordova-2.0.0.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+        <audio id="rollSound" src="http://taylorcopeland.com/Shake%20And%20Roll%20Dice-SoundBible.com-591494296.wav" preload="auto" />
+    </body>
+
+
+
+
+</html>
